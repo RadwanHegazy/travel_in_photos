@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دمج الصور</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <div>
+        <h1 class="hi">السلام عليكم ورحمة الله وبركاتة <span></span></h1>
+    </div>
+
+    <div class="cont">
+        
+        
+        <div class="images">
+        
+            <img src="{% static 'places/giza.jpeg' %}" alt="">
+
+            
+            <button class="right"><i class="fa fa-arrow-right"></i></button>
+            <button class="left"><i class="fa fa-arrow-left"></i></button>
+
+        </div>
+
+
+
+
+        <!-- user side -->
+        <div class="user">
+            <p>اضف صورة</p>
+            <div class="layer">
+                <button class="add">اضف صورة</button>
+            </div>
+            <img src="" alt="">
+            <form action="">
+                <input type="file" hidden id="user-images">
+            </form>
+        </div>
+
+
+    </div>
+
+    <button class="done">تصميم</button>
+    
+    <footer>
+        Developed By : <span>Radwan Gaber Hijazi</span>
+    </footer>
+
+    <div class="load">
+        <small></small>
+    </div>
+    <script src="{% static 'main.js' %}"></script>
+</body>
+</html>

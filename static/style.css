@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --var-font: 'Cairo', sans-serif;
+    --var-main-color:#82AAE3;
+}
+
+
+
+.hi {
+    font-family: var(--var-font);
+    color: var(--var-main-color);
+    text-align: center;   
+    position: relative;
+}
+
+.hi span {
+    width: 20%;
+    background-color: var(--var-main-color);
+    height: 5px;
+    box-shadow: 0px 7px 12px #82AAE350;
+    border-radius: 30px;
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 500px auto;
+}
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    border-top: 1px solid #c6c6c6 ;
+    padding: 1rem;
+    width: 90%;
+    margin: auto;
+}
+
+footer span {
+    color: var(--var-main-color);
+    font-weight: bold;
+}
+
+
+.cont {
+    position: relative;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+.cont .user{
+    width: 25%;
+    height: 100%;
+    position: relative;
+    border: 5px dotted var(--var-main-color);
+    border-radius: 50px;
+    /* padding: 1rem; */
+    overflow: hidden;
+}
+
+
+.user img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 3;
+}
+
+.cont .images{
+    width: 75%;
+    padding: 1rem;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000020;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.user p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: var(--var-font);
+    z-index: -1;
+}
+
+.user:hover .layer {
+    opacity: 1;
+}
+
+
+.cont .user .add {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 1rem;
+    border-radius: 50px;
+    border: 3px solid var(--var-main-color);
+    outline: none;
+    background-color: transparent;
+    color: var(--var-main-color);
+    font-family: var(--var-font);
+    width: 150px;
+    font-weight: bold;
+    z-index: 2;
+    box-shadow: 0px 2px 10px #82AAE350;
+    transition: all 0.3s ease;
+    background-color: #fff;
+}
+
+.cont .user .add:hover {
+    background-color: #82AAE350;
+    cursor: pointer;
+}
+
+
+.images button {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background-color: #ffffff80;
+    color: var(--var-main-color);
+    cursor: pointer;
+}
+
+.images button.left {
+    left: 60px;
+
+}
+
+.images button.right {
+    right: 30px;
+}
+
+.images button i {
+    font-size: 20px;
+}
+
+.images img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    padding-right: 1rem;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+.done {
+    width: 300px;
+    margin: 7px auto;
+    padding: 1rem;
+    background-color: var(--var-main-color);
+    color: #fff;
+    font-family: var(--var-font);
+    border-radius: 30px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.load {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff90;
+    z-index: 5;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.load.view {
+    display: flex;
+}
+
+.load small {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 20px solid #fff;
+    border-top-color: var(--var-main-color);
+    animation: spin 1s  infinite ;
+}
+
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
